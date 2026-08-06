@@ -42,5 +42,7 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Adona Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Adona Medical is a clinical-stage medical device company headquartered in Los Gatos, California, and a Shifamed portfolio company, developing an adjustable interatrial shunt with integrated bi-atrial pressure monitoring for patients with advanced heart failure. The implant uses nitinol shape-memory geometry so the shunt flow channel can be enlarged or reduced after implantation, allowing hemodynamic therapy to be re-titrated as a patient's condition evolves. The company completed enrollment in its ATHENS-HF first-in-human study of the device. Adona Medical is a device and clinical company rather than a software vendor: it publishes no public developer program, API, SDK, or machine-readable specifications, and its device is investigational and not approved for sale.
+
+- https://adonamed.com/
+- https://www.linkedin.com/company/adona-medical

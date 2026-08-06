@@ -1,7 +1,15 @@
 aid: adona-medical
 name: Adona Medical
-description: 'Adona Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Adona Medical is a clinical-stage medical device company headquartered
+  in Los Gatos, California, and a Shifamed portfolio company, developing an adjustable
+  interatrial shunt with integrated bi-atrial pressure monitoring for patients with
+  advanced heart failure. The implant uses nitinol shape-memory geometry so the shunt
+  flow channel can be enlarged or reduced after implantation, allowing hemodynamic
+  therapy to be re-titrated as a patient''s condition evolves. The company completed
+  enrollment in its ATHENS-HF first-in-human study of the device. Adona Medical is
+  a device and clinical company rather than a software vendor: it publishes no public
+  developer program, API, SDK, or machine-readable specifications, and its device is
+  investigational and not approved for sale.'
 url: https://raw.githubusercontent.com/api-evangelist/adona-medical/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +20,13 @@ created: '2026-08-06'
 modified: '2026-08-06'
 tags:
 - Company
+- Medical Devices
+- Medical Technology
+- Healthcare
+- Cardiovascular
+- Heart Failure
+- Remote Patient Monitoring
+- Clinical Stage
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,36 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/adona-medical-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://adonamed.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/adona-medical
+- type: X
+  url: https://x.com/adonamedical
+x-enrichment:
+  date: '2026-08-06'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: >-
+    Every path on adonamed.com — the homepage, /openapi.json, /llms.txt, all
+    /.well-known/* discovery paths and a deliberately nonexistent control path alike —
+    answers HTTP 202 with an `sg-captcha: challenge` header and a 169-byte SiteGround
+    captcha redirect, so not one page or discovery document on the company's own host
+    could be read; the api./developer./docs./status. subdomains are all NXDOMAIN and
+    there is no GitHub organization, so no alternate reading path exists either.
+  evidence:
+  - url: https://adonamed.com/
+    status: 202
+  - url: https://adonamed.com/openapi.json
+    status: 202
+  - url: https://adonamed.com/.well-known/agent-card.json
+    status: 202
+  - url: https://api.github.com/orgs/adonamedical
+    status: 404
+  checked: '2026-08-06'
